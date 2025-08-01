@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>About Us</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: #000000;
+        }
+         .navbar {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar nav {
+            width: 62%;
+            height: 80%;
+            background-color: #1b1b1b;
+            filter: opacity(0.9);
+            border-radius: 50px;
+        }
+
+        .navbar nav ul {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100%;
+        }
+
+
+        li {
+            list-style: none;
+            padding: 10px 80px;
+
+        }
+
+        li:hover {
+            background-color: rgb(57, 57, 57);
+            border-radius: 25px;
+        }
+
+        li a {
+            text-decoration: none;
+            color: white;
+            font-family: "Smooch Sans", sans-serif;
+            font-size: 30px;
+        }
+
+        .checkbutton {
+            display: none;
+            cursor: pointer;
+            color: white;
+        }
+
+        #check {
+            display: none;
+        }
+
+         .banner{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./image/team.jpg');
+            background-color: #000000;
+            background-size: cover;
+            background-position: center;
+            justify-content: center;
+        }
+        
+
+        .aboutus {
+            width: 80%;
+            height: 60vh;
+            display: flex;
+            position: relative;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            align-items:center;
+            border-radius: 20px;
+
+        }
+
+        .leftdiv{
+            width: 100%;
+            height: auto;
+            justify-content: center;
+            border-radius: 20px;
+           
+        }
+
+        .p1 {
+            color: #ffffff;
+            font-family: "Michroma", sans-serif;
+            font-size: 80px;    
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .p2 {
+             color: #ffffff;
+            font-family: "Smooch Sans", sans-serif;
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 20px;
+            /* margin-left: 15px; */
+        }
+
+        .p3 {
+            width: 80%;
+            color: #ffffff;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 18px;
+            text-align: center;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .workdone{
+            width: 100%;
+            position: relative;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            display: grid;
+            column-gap: 250px;
+            grid-template-columns: auto auto auto auto;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        .workdonediv{
+            justify-content: center;
+            align-items: center;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+
+        .workdone img{
+
+            height: 80px; 
+            width: 80px;
+
+
+        }
+
+
+       .img_mb{
+        display: none;
+       }
+
+
+        .whoweare {
+            width: 100%;
+            /* border-radius: 20px; */
+            height: 100vh;
+            display: flex;
+            position: relative;
+            /* top: 40%; */
+            /* margin-top: 5%; */
+            /* margin-bottom: 5%; */
+            left: 50%;
+            transform: translateX(-50%);
+            align-items:center;
+            /* border: 2px solid black; */
+            background-color: #1b1b1b;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent), url("image/ambientbg.jpg");
+            background-position: center;
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+            box-shadow: #ffffff;
+        }
+
+        .p4{
+            width: 50%;
+            font-size: 115px;
+            font-family: "Michroma", sans-serif;
+            font-weight: 800;
+            position: absolute;
+            left : 10%;
+            color: #ffffff;
+        }
+
+        .p5{
+            width: auto;
+            font-size: 30px;
+            color: #ffffff;
+            position: absolute;
+            font-family: "Smooch Sans", sans-serif;
+            bottom: 13%;
+            left: 75%;
+        }
+
+
+
+
+        .form {
+            display: block;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('./image/formbg.jpg');
+            background-position: center;
+            background-size: cover;
+            height: auto;
+            padding: 40px 200px;
+        }
+
+
+        .form h1 {
+            font-size: 50px;
+            color: #ffbf7f;
+            font-family: "Michroma", sans-serif;
+
+        }
+
+        h4 {
+            color: white;
+            font-family: "Smooch Sans", sans-serif;
+            font-size: 30px;
+        }
+
+
+
+
+
+        .containerleft {
+            width: 30%;
+            height: 100%;
+            position: relative;
+            display: grid;
+            padding-left: 20px;
+            row-gap: 20px;
+            justify-content: space-between;
+        }
+
+        .containerleft img {
+            height: 45px;
+            width: 45px;
+        }
+
+        .containerleft h3 {
+            position: relative;
+            color: #ffbf7f;
+            font-family: "Michroma", sans-serif;
+        }
+
+        .containerleft p {
+            position: relative;
+            font-family: "Smooch Sans", sans-serif;
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        .containerleft h5 {
+            display: none;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: #ffffff;
+        }
+
+
+
+
+
+        .containerright {
+            width: 70%;
+            height: 100%;
+            border: 1px solid #ffbf7f;
+            position: relative;
+            border-radius: 15px;
+            display: grid;
+        }
+
+        .containerright .cr{
+            display: flex; 
+            justify-content: space-evenly;
+        }
+
+        .cr input {
+            width: 40%;
+            height: 20px;
+            padding: 20px;
+            background-color: #000000;
+            color: #ffffff;
+            margin: 16px 0;
+            border-radius: 10px;
+            font-family: "Smooch Sans", sans-serif;
+            font-size: 25px;
+        }
+
+        .containerright button {
+            width: 90px;
+            height: 40px;
+            text-align: center;
+            background-color: #ffbf7f;
+            color: rgb(8, 8, 8);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            padding: 5px;
+            margin: 10px 0;
+            border-radius: 10px;
+            font-family: "Smooch Sans", sans-serif;
+            font-size: 24px;
+        }
+
+
+
+
+        .followbar {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .follow {
+            width: 100%;
+            height: 80%;
+            display: flex;
+            border-top: 2px solid rgb(255, 255, 255);
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .follow p {
+            font-size: 30px;
+            position: relative;
+            font-family: "Smooch Sans", sans-serif;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .icons {
+            display: flex;
+            width: 60%;
+            justify-content: space-evenly;
+            position: relative;
+            align-items: center;
+        }
+
+        .icons img {
+            height: 32px;
+            width: 32px;
+        }
+
+
+        @media (min-width:992px){
+          .conatiner {
+                display: flex;
+                margin-top: 40px;
+                justify-content: space-between;
+            }
+         
+        }
+
+
+
+
+
+
+        @media only screen and (max-width:600px){
+
+            .navbar {
+                width: 100%;
+                height: 40px;
+                z-index: 1000;
+            }
+
+            .navbar nav {
+                width: 70%;
+            }
+
+
+            li a {
+                font-size: 16px;
+            }
+
+
+            .checkbutton {
+                display: flex;
+                position: relative;
+                right: 5%;
+                top: 3px;
+                justify-content: flex-end;
+                cursor: pointer;
+                z-index: 1001;
+                font-size: 20px;
+            }
+
+            .navbar nav ul {
+                display: none;
+            }
+
+            #check:checked~ul {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 40px;
+                height: 45vh;
+                background: rgba(27, 27, 27, 0.97);
+
+            }
+
+            .banner{
+            /* height: 85vh; */
+            /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./image/croptop.jpg'); */
+            background-color: #000000;
+            background-size: cover;
+            background-position: center;
+            justify-content: center;
+            }
+        
+
+        .aboutus {
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 15%;
+        }
+
+
+        .leftdiv{
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 0;
+            margin-top: 10px;
+            border-radius: 20px;
+           
+        }
+
+        .p1 {
+            font-size: 10vw;
+        }
+
+
+        .rightimg{
+            display: none;
+        }
+
+
+        .img_mb{
+            display: block;
+            width: 200px;
+            height: 80%;
+            position: relative;
+            border-radius: 20px;
+        }
+
+
+
+        .p2 {
+            color: #ffffff;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .p3 {
+            color: #ffffff;
+           
+            font-size: 10px;
+            margin-left: 0px;
+            margin-bottom: 10px;
+        }
+
+
+
+         .workdone{
+            width: 100%;
+            position: relative;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #ffffff;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            column-gap: 10px;
+            row-gap: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .workdonediv{
+            justify-content: center;
+            align-items: center;
+            display: flex; 
+            flex-direction: column; 
+            align-items: center;
+        }
+
+        .workdone img{
+            height: 35px; 
+            width: 35px;
+        }
+
+
+         .whoweare {
+            display: flex;
+            position: relative;
+            /* align-items:center; */
+            
+            height: 45vh;
+            display: flex;
+            top: 0%;
+            /* margin-bottom: 5%; */
+            /* left: 50%; */
+            /* align-items:center; */
+            
+        }
+
+        .p4{
+            width: 45%;
+            font-size: 50px;
+            position: relative;
+            left : 10%;
+            color: #ffffff;
+        }
+
+        .p5{
+            width: 40%;
+            font-size: 13px;
+            color: #ffffff;
+            position: absolute;
+            /* bottom: 5%; */
+            left: 60%;
+            right: 10px;;
+        }
+
+
+
+
+
+        
+
+
+
+
+
+
+
+          .form {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                padding: 30px 50px;
+                ;
+            }
+
+            .form h1 {
+                font-size: 8vw;
+                text-align: center;
+            }
+
+            h4 {
+                margin-top: 10px;
+                font-size: 20px;
+                text-align: center;
+                font-weight: 100;
+            }
+
+
+
+            .conatiner {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                top: 30px;
+
+            }
+
+
+
+
+            .containerleft {
+                width: 100%;
+                float: none;
+                height: auto;
+                /* text-align: center; */
+                position: relative;
+                top: 0px;
+                /* display: flex; */
+                padding-left: 0px;
+
+
+                justify-content: center;
+
+            }
+
+            .containerleft img {
+                width: 32px;
+                height: 32px;
+
+            }
+
+
+
+            .containerleft h3 {
+                font-size: 5vw;
+                position: relative;
+
+            }
+
+            .containerleft p {
+                font-size: 4.5vw;
+                font-weight: 100;
+            }
+
+            .containerleft h5 {
+                display: none;
+                color: #ffffff;
+
+            }
+
+
+            .containerright {
+                width: auto;
+                display: flex;
+                flex-direction: column;
+                margin-top: 15px;
+                padding: 15px;
+            }
+
+            .containerright .cr{
+                flex-direction: column;
+                align-items: center;
+            }
+
+            
+
+
+            .cr input {
+                width: 80%;
+                height: 5px;
+                margin: 10px 0px;
+                font-family: "Smooch Sans", sans-serif;
+                font-weight: 500;
+                font-size: 20px;
+       
+            }
+
+            
+
+            .containerright button {
+                width: 90px;
+                height: 40px;
+                background-color: #ffffff;
+                color: rgb(0, 0, 0);
+                margin: 10px 0;
+                font-family: "Smooch Sans", sans-serif;
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+
+
+
+            .followbar {
+                width: 100%;
+                height: 50px;
+            }
+
+            .follow {
+                width: 100%;
+                height: 80%;
+                background-color: #3e3b3b00;
+                justify-content: space-evenly;
+            }
+
+
+            .follow p {
+                font-size: 25px;
+                left: 0%;
+                display: block;
+                align-items: center;
+            }
+
+            .icons {
+                display: flex;
+                width: 50%;
+                align-items: center;
+            }
+
+            .icon div{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            .icons img {
+                height: 23px;
+                width: 23px;
+            }
+
+           
+            
+
+
+        }
+
+
+
+
+        </style>
+</head>
+
+
+<body>
+
+    <div class="banner">
+
+        <div class="navbar">
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbutton" >
+                   &#9776;
+                </label>
+                <ul>
+                    <li><a href="./UI.html">Home</a></li>
+                    <li><a href="./properties.html">Properties</a></li>
+                    <li><a href="./about_us.html">About Us</a></li>
+                    <li><a href="./contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="aboutus">
+
+            <div class="leftdiv">
+
+              
+
+                <p class="p1">About Us</p>
+
+                <!-- <div class="img_mb"><img src="./image/croptop.jpg" alt="croptop" class="rightimg"></div> -->
+                <!-- <div class="img_mb"><img src="./image/croptop.jpg" alt="croptop" style="width:100%;border-radius:20px;display:block;"></div> -->
+                
+                <p class="p2">Trusted Real Estate Solutions,<br>Built Around You</p>
+
+                <!-- <p class="p3">We are a passionate team of real estate professionals committed to helping you find more than just a property —
+                     we help you discover a place to call home. With a deep understanding of local markets and client needs, we bring clarity, 
+                     trust, and expertise to every real estate journey. </p> -->
+
+
+                    
+            </div>
+
+    
+
+            <!-- <img src="./image/croptop.jpg" alt="croptop" class="rightimg"> -->
+        </div>
+
+         <div class="workdone">
+
+                        <div class="workdonediv">
+                            <img src="./image/profit.png" height="80" width="80">
+                            <h1>15+</h1>
+                            <p>Investment</p>
+                        </div>
+
+                        <div class="workdonediv">
+                            <img src="./image/building.png" height="80" width="80">
+                            <h1>125+</h1>
+                            <p>Unit Available</p>
+                        </div>
+
+
+                        <div class="workdonediv">
+                            <img src="./image/partner.png" height="80" width="80">
+                            <h1>40+</h1>
+                            <p>Trusted Partner</p>
+                        </div>
+
+                        <div class="workdonediv">
+                            <img src="./image/businessman.png" height="80" width="80">
+                            <h1>100+</h1>
+                            <p>Customer Joined</p>
+                        </div>  
+                    </div>
+        
+           
+
+    </div>
+    
+
+    <div class="whoweare">
+
+        <p class="p4">who<br> we<br> are </p>
+
+        <p class = "p5"> We're Expert in virtual reality and<br> scanning 3D technologies for real<br> estate companies to enhance the<br>user experience in his decision<br> journey........</p>
+
+    </div> 
+
+<div class="form">
+        <h1>Get in Touch</h1>
+
+        <h4>
+            Want to get in touch? We'd love to hear from you. Here's how you can reach us.
+        </h4>
+
+        <div class="conatiner">
+            <div class="containerleft">
+
+                <div style="display: flex;align-items: center;">
+
+                    <div><img src="./Social Media Icon BW/location.png"></div>
+
+
+                    <div style="margin-left: 25px;">
+                        <h3>Address</h3>
+                        <p>
+                            1234 Street Name,
+                            City,<br>
+                            State,
+                            Zip Code<br>
+                        </p>
+                    </div>
+
+                </div>
+
+                <div style="display: flex;  align-items: center;">
+
+                    <img src="./Social Media Icon BW/call.png">
+
+                    <div style="margin-left: 25px;">
+                        <h3>Phone</h3>
+                        <p>(123) 456-7890 <br>
+                            (123) 456-7890</p>
+                    </div>
+                </div>
+
+
+                <div style="display: flex; align-items: center;">
+
+                    <div><img src="./Social Media Icon BW/mail.png"></div>
+
+                    <div style="margin-left: 25px;">
+                        <h3>Email</h3>
+                        <p>demomail@domainname.com<br>
+                            demomail@domainname.com</p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="followbar">
+
+                    <div class="follow">
+
+                        <p>Follow us</p>
+
+                        <div class="icons">
+                            <div><img src="./Social Media Icon BW/facebook.png" height="32" width="32"></div>
+                            <div><img src="./Social Media Icon BW/twitter.png" height="32" width="32"></div>
+                            <div><img src="./Social Media Icon BW/instagram.png" height="32" width="32"></div>
+                            <div><img src="./Social Media Icon BW/linkedin.png" height="32" width="32"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="containerright">
+
+                
+
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key" value="ef32129c-348e-4960-93fe-5072e5489b11">
+
+                    <div class="cr">
+                        <input id="name" type="text" name="name" placeholder="NAME">
+                        <input id="email" type="email" name="email" placeholder="EMAIL">
+                    </div>
+
+                    <div class="cr">
+                        <input id="phone" type="tel" name="phone" placeholder="PHONE">
+                        <input id="message" type="text" name="message" placeholder="MESSAGE">
+                    </div>
+
+                    <div style="width: 100%; display:flex; justify-content: space-evenly; ">
+                        <button id="submit" type="submit">SUBMIT</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+    <script type="module">
+        // Import required Firebase modules
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore.js";
+
+        // Your Firebase config
+        const firebaseConfig = {
+            apiKey: "AIzaSyC3SJo92aeMDzrBuEr4KIGFpDXl5AKQzEU",
+            authDomain: "fir-web-project-7f75b.firebaseapp.com",
+            projectId: "fir-web-project-7f75b",
+            storageBucket: "fir-web-project-7f75b.appspot.com",   // fixed `.app` to `.appspot.com`
+            messagingSenderId: "183986509862",
+            appId: "1:183986509862:web:9641d6e0599f9b0bf66ee7",
+            measurementId: "G-91MWV5P56N"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);  // ✅ This was missing
+
+        // Form submission logic
+        document.getElementById("contactForm").addEventListener("submit", async (e) => {
+            // e.preventDefault();
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+
+            try {
+                await addDoc(collection(db, "contactMessages"), {
+                    name,
+                    email,
+                    phone,
+                    message,
+                    timestamp: new Date()
+                });
+                alert("Message Sent Successfully!");
+                document.getElementById("contactForm").reset();
+            } catch (error) {
+                alert("Error sending message. Check console.");
+                console.error("Error writing document: ", error);
+            }
+        });
+    </script>
+
+</body>
+</html>
