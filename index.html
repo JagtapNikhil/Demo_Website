@@ -26,17 +26,19 @@
             justify-content: center;
             align-items: center;
             position: fixed;
+            background-color: #ffffff;
+            filter: opacity(0.9);
             top: 0;
             z-index: 1000;
         }
 
         .navbar nav {
-            width: 62%;
+            width: 70%;
             height: 80%;
-            background-color: #1b1b1b;
-            filter: opacity(0.9);
-            border-radius: 50px;
-        }
+            
+            
+            /* border-radius: 50px; */
+        }   
 
         .navbar nav ul {
             display: flex;
@@ -45,6 +47,11 @@
             height: 100%;
         }
 
+        .navbar nav img {
+
+            height: 50px;
+            width: 50px;
+        }
 
         li {
             list-style: none;
@@ -59,7 +66,7 @@
 
         li a {
             text-decoration: none;
-            color: white;
+            color: rgb(0, 0, 0);
             font-family: "Smooch Sans", sans-serif;
             font-size: 30px;
         }
@@ -77,28 +84,43 @@
         .banner {
             width: 100%;
             height: 100vh;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./image/bgbg.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./image/bgbgbgbg.png');
             background-size: cover;
             background-position: center;
         }
 
-        .banner h1 {
+      .banner h1 {
             color: rgb(255, 255, 255);
             font-family: "Michroma", sans-serif;
             position: absolute;
-            top: 20%;
-            left: 150px;
-            font-size: 400%;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 300%;
+            text-align: center;
+        }
+
+        .banner h2 {
+            color: rgb(255, 255, 255);
+            font-family: "Michroma", sans-serif;
+            position: absolute;
+            top: 40%;   
+            /* left: 150px; */
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 150%;
         }
 
         .bannertext2 {
-            width: 30%;
-            color: #ffbf7f;
+            width: 60%;
+            color: #ffffff;
             font-family: "Smooch Sans", sans-serif;
             position: relative;
-            top: 55%;
+            top: 63%;
             font-size: 40px;
-            left: 65%;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
         }
 
         .btn{
@@ -115,10 +137,10 @@
             position: relative;
             width: 85%;
             height: 100px;
-            top: 62%;
+            top: 70%;
             justify-content: center;
             align-items: center;
-            background-color: #363636;
+            background-color: #ffffff;;
             filter: opacity(0.8);
             border-radius: 20px;
             /* padding: 10px; */
@@ -132,7 +154,7 @@
             padding: 5px 15px;
             margin: 0px 15px;
             border-radius: 10px;
-            background-color: #000000;
+            background-color: #c5c5c5;
             font-family: "Smooch Sans", sans-serif;
             text-align: center;
             border-color: #000000;
@@ -148,7 +170,7 @@
             height: 43px;
             padding: 5px 15px;
             margin: 0 10px;
-            background-color:#ffbf7f;
+            background-color:#e1c09c;
             color: #000000;
             border-radius: 10px;
             font-family: "Smooch Sans", sans-serif;
@@ -158,7 +180,7 @@
 
 
         .title2 {
-            color: beige;
+            color: rgb(109, 83, 61);
             font-family: "Michroma", sans-serif;
             width: 80%;
             position: relative;
@@ -174,7 +196,7 @@
         .flexboxcontainer {
             display: flex;
             height: 36vh;
-            background-color: #1f1f1f;
+            background-color: #fff8ed;
             position: relative;
             top: 20%;
         }
@@ -189,7 +211,7 @@
             height: 100px;
             padding: 40px 50px 50px 50px;
             text-align: justify;
-            background-color: #1f1f1f;
+            background-color: #fff8ed;
             color: rgb(255, 255, 255);
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         }
@@ -201,12 +223,13 @@
         }
 
         .flexboxcontainer h2 {
-            color: #ffbf7f;
+            color: #4d3418;
             font-family: "Smooch Sans", sans-serif;
             font-size: 35px;
         }
 
         .flexboxcontainer p{
+            color: #000000;
             font-size: 18px;
             font-family: "Smooch Sans", sans-serif;
             font-size: 24px;
@@ -557,9 +580,16 @@
                 width: 100%;
                 font-size: 10vw;
                 top: 20%;
-                left: 0%;
+                /* left: 0%; */
                 text-align: center;
             }
+
+            .banner h2 {
+                width: 70%;
+                top: 40%;
+                font-size: 100%;
+                text-align: center;
+        }
 
             .bannertext2 {
                 text-align: center;
@@ -582,16 +612,17 @@
             }
 
             .btn button{
-                display: block;
-                width: 100px;
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                width: 120%;
                 height: 30px;
                 background-color: #ffbf7f;
                 color: #000000;
                 border-radius: 10px;
-                font-size: 20px;
+                font-size: 15px;
                 font-family: "Smooch Sans", sans-serif;
                 font-weight: 500;
-                
             }
 
             .form2 {
@@ -696,7 +727,7 @@
                 position: absolute;
                 font-size: 10vw;
                 text-align: center;
-                top: 250%;
+                top: 210%;
             }
 
 
@@ -882,7 +913,8 @@
                 </label>
                 <ul>
                     <li><a href="./index.html">Home</a></li>
-                    <li><a href="./properties.html">Properties</a></li>
+                    <li><a href="./properties.html">Projects</a></li>
+                    <img src="./image/logooooo.png" alt="">
                     <li><a href="./about_us.html">About Us</a></li>
                     <li><a href="./contact_us.html">Contact</a></li>
                 </ul>
@@ -891,14 +923,14 @@
 
 
 
-        <h1>Engineering <br>Design and <br>Architecture</h1>
+        <h1>Vaastushilp Interior  <h2>Designing Elegant & Functional Spaces</h2></h1>
 
-        <p class="bannertext2">Explore our features and services
-            and get in touch with us for more information.
+        <p class="bannertext2">We design modern interiors that blend comfort, style, 
+            and functionality — turning every space into a masterpiece.
         </p>
 
         <div class="btn">
-            <button>Visit Site</button>
+            <button>Start Your Project</button>
         </div>
 
 
@@ -909,31 +941,31 @@
                 <input id="name" type="text" name="name" placeholder="NAME">
                 <input id="email" type="email" name="email" placeholder="EMAIL" >
                 <input id="phone" type="tel" name="phone" placeholder="PHONE" >
-                <button type="submit" >BOOK SITE VISIT</button>
+                <button type="submit" >BOOK FREE CONSULTATION</button>
             </form>
     </div>
 
 
 
 
-    <div style="background-color:#1f1f1f">
-        <h2 class="title2"> Principles upon which <br>our work is built</h2>
-
+    <div style="background-color:#fff8ed">
+        <h2 class="title2"> Our Interior Design Philosophy</h2>
+        
         <div class="flexboxcontainer">
 
            <div class="flexboxcontainer_style">
-                <h2 style="text-align: start;">Integrity in Every Transaction</h2><br>
-                <p>We believe trust is the foundation of real estate. That’s why we’re committed to transparency, honest communication from first inquiry to final paperwork.</p>
+                <h2 style="text-align: start;">Design With Purpose</h2><br>
+                <p>We believe every space should reflect personality and purpose. Our designs focus on aesthetics, comfort, and functionality.</p>
             </div>
 
             <div class="flexboxcontainer_style">
-                <h2 style="text-align: start;">Client-Centric Service</h2><br>
-                <p>Your goals shape our strategy. Whether buying, selling, or investing, we take time to understand your needs and offer results-driven support.</p>
+                <h2 style="text-align: start;">Client First Approach</h2><br>
+                <p>Every project starts with understanding your vision. We collaborate closely to create interiors that match your lifestyle and preferences.</p>
             </div>
 
             <div>
-                <h2 style="text-align: start;">Excellence Through Expertise</h2><br>
-                <p>With strong market insight and industry experience, we deliver detailed evaluations and smart marketing bringing professionalism to every project.</p>
+                <h2 style="text-align: start;">Creative Interior Solutions</h2><br>
+                <p>Our team combines creativity, material knowledge, and modern design trends to craft beautiful and practical interiors.</p>
             </div>
 
         </div>
@@ -941,7 +973,7 @@
 
     <!-- <div class="residence"> -->
 
-    <p class="title3"> DUPLEX<br>RESIDENCE</p>
+    <p class="title3">OUR<br>INTERIOR DESIGNS</p>
 
     <div class="accordianBox">
 
@@ -981,23 +1013,23 @@
     <div class="slice-image">
 
             <div class="border_right">
-                <h2>Architectural Services</h2>
-                <p>We provide innovative and efficient architectural solutions, blending design and function to reflect each client's vision.</p>
+                <h2>Residential Interior Design</h2>
+                <p>We design stylish and comfortable home interiors including living rooms, bedrooms, kitchens, and complete home transformations.</p>
             </div>
 
             <div class="border_right">
-                <h2>Interior Design Services</h2>
-                <p>We create stylish, functional interiors tailored to your lifestyle—combining smart layouts, comfort, and elegant finishes.</p>
+                <h2>Commercial Interior Design</h2>
+                <p>We create modern office, retail, and workspace interiors that enhance productivity and brand identity.</p>
             </div>
 
             <div class="border_right">
-                <h2>BIM & 3D Visualization</h2>
-                <p>Our BIM and 3D visuals bring ideas to life, improve coordination, and offer clear insight—saving time and reducing errors.</p>
+                <h2>3D Interior Visualization</h2>
+                <p>Our realistic 3D designs help you visualize your interior before execution, ensuring clarity and perfection in every detail.</p>
             </div>
 
             <div>
-                <h2>Landscape<br>Design</h2>
-                <p>We design sustainable, functional outdoor spaces that enhance architecture and support environmental well-being.</p>
+                <h2>Furniture & Space Planning</h2>
+                <p>We optimize layouts and furniture placement to maximize comfort, functionality, and aesthetic appeal.</p>
             </div>
 
 
@@ -1005,10 +1037,10 @@
 
 
     <div class="form1">
-        <h1>Get in Touch</h1>
+        <h1>Start Your Interior Project</h1>
 
         <h4>
-            Want to get in touch? We'd love to hear from you. Here's how you can reach us.
+            Have a space that needs transformation? Contact Vaastushilp Interior today and let’s create something beautiful together.
         </h4>
 
         <div class="conatiner">
